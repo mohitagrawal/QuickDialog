@@ -79,11 +79,8 @@ static const int kCellMinimumLabelWidth = 80;
             valueSize = [self.textLabel.text sizeWithFont:self.textLabel.font constrainedToSize:sizeWithMargin];
         }
 
-        self.textLabel.frame = CGRectMake(
-                self.textLabel.frame.origin.x,
-                QCellMargin,
-                valueSize.width,
-                bounds.size.height- QCellMarginDouble);
+        self.textLabel.frame = CGRectMake(15, self.textLabel.frame.origin.y,
+                                          self.textLabel.frame.size.width, self.textLabel.frame.size.height);
 
         CGFloat detailsWidth = bounds.size.width - QCellMarginDouble;
         if (valueSize.width>0)
